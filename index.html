@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow – Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="brand">✅ TaskFlow</span>
+  <a href="index.html">Dashboard</a>
+  <a href="add-task.html">Add Task</a>
+  <a href="task-list.html">Task List</a>
+  <a href="task-detail.html">Task Detail</a>
+  <a href="about.html">About</a>
+</nav>
+
+<div class="container">
+  <h1>Welcome to TaskFlow 👋</h1>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="num">12</div>
+      <div class="label">Total Tasks</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">5</div>
+      <div class="label">Pending</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">7</div>
+      <div class="label">Completed</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">3</div>
+      <div class="label">High Priority</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Quick Navigation</h2>
+    <p style="color:#555; margin-bottom:16px;">Manage your tasks from one place.</p>
+    <div class="nav-links">
+      <a href="add-task.html" class="btn btn-primary">+ Add New Task</a>
+      <a href="task-list.html" class="btn btn-outline">View All Tasks</a>
+      <a href="task-detail.html" class="btn btn-outline">Task Detail</a>
+      <a href="about.html" class="btn btn-outline">Help</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Recent Tasks</h2>
+    <table>
+      <thead>
+        <tr><th>Task</th><th>Due Date</th><th>Priority</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Design homepage wireframe</td>
+          <td>2026-06-18</td>
+          <td><span class="badge badge-high">High</span></td>
+          <td><span class="badge badge-pending">Pending</span></td>
+        </tr>
+        <tr>
+          <td>Write unit tests</td>
+          <td>2026-06-20</td>
+          <td><span class="badge badge-medium">Medium</span></td>
+          <td><span class="badge badge-done">Completed</span></td>
+        </tr>
+        <tr>
+          <td>Deploy to Render</td>
+          <td>2026-06-22</td>
+          <td><span class="badge badge-high">High</span></td>
+          <td><span class="badge badge-pending">Pending</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

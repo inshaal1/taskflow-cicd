@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow – Task Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="brand">✅ TaskFlow</span>
+  <a href="index.html">Dashboard</a>
+  <a href="add-task.html">Add Task</a>
+  <a href="task-list.html">Task List</a>
+  <a href="task-detail.html">Task Detail</a>
+  <a href="about.html">About</a>
+</nav>
+
+<div class="container">
+  <h1>Task Detail</h1>
+
+  <div class="card">
+    <h2 id="taskTitle">Design Homepage Wireframe</h2>
+    <hr style="margin: 14px 0; border-color: #e5e7eb;" />
+
+    <div class="detail-row">
+      <span class="key">Description</span>
+      <span class="val" id="taskDesc">Create a full wireframe for the homepage including navigation, hero section, and footer layout.</span>
+    </div>
+    <div class="detail-row">
+      <span class="key">Due Date</span>
+      <span class="val">2026-06-18</span>
+    </div>
+    <div class="detail-row">
+      <span class="key">Priority</span>
+      <span class="val"><span class="badge badge-high">High</span></span>
+    </div>
+    <div class="detail-row">
+      <span class="key">Status</span>
+      <span class="val" id="statusBadge"><span class="badge badge-pending">Pending</span></span>
+    </div>
+    <div class="detail-row">
+      <span class="key">Assigned To</span>
+      <span class="val">Team Member 4</span>
+    </div>
+
+    <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
+      <button class="btn btn-success" onclick="markDone()">✔ Mark as Complete</button>
+      <button class="btn btn-danger" onclick="deleteTask()">🗑 Delete Task</button>
+      <a href="task-list.html" class="btn btn-outline">← Back to List</a>
+    </div>
+
+    <div id="doneMsg" style="display:none; margin-top:14px; padding:12px; background:#dcfce7; color:#166534; border-radius:8px; font-weight:600;">
+      ✅ Task marked as completed!
+    </div>
+    <div id="delMsg" style="display:none; margin-top:14px; padding:12px; background:#fee2e2; color:#991b1b; border-radius:8px; font-weight:600;">
+      🗑 Task deleted. Redirecting to list...
+    </div>
+  </div>
+</div>
+
+<script>
+function markDone() {
+  document.getElementById('statusBadge').innerHTML = '<span class="badge badge-done">Completed</span>';
+  document.getElementById('doneMsg').style.display = 'block';
+}
+function deleteTask() {
+  document.getElementById('delMsg').style.display = 'block';
+  setTimeout(() => window.location.href = 'task-list.html', 2000);
+}
+</script>
+
+</body>
+</html>

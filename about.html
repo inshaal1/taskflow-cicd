@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow – About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="brand">✅ TaskFlow</span>
+  <a href="index.html">Dashboard</a>
+  <a href="add-task.html">Add Task</a>
+  <a href="task-list.html">Task List</a>
+  <a href="task-detail.html">Task Detail</a>
+  <a href="about.html">About</a>
+</nav>
+
+<div class="container">
+  <h1>About TaskFlow</h1>
+
+  <div class="card">
+    <h2>What is TaskFlow?</h2>
+    <p style="color:#444; line-height:1.7;">
+      TaskFlow is a lightweight task-management web application designed to help individuals and teams
+      stay organized. It allows you to create, track, and manage tasks with priorities and deadlines —
+      all from a clean, simple interface. Built as part of the DevOps CI/CD assignment, TaskFlow
+      demonstrates automated deployment using GitHub Actions, Docker, and Render.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>How to Use TaskFlow</h2>
+    <table>
+      <thead>
+        <tr><th>Page</th><th>What it Does</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Dashboard</strong></td>
+          <td>See a summary of all tasks (total, pending, completed) and quick navigation links.</td>
+        </tr>
+        <tr>
+          <td><strong>Add Task</strong></td>
+          <td>Fill out the form to create a new task with a title, description, due date, and priority.</td>
+        </tr>
+        <tr>
+          <td><strong>Task List</strong></td>
+          <td>Browse all tasks. Use the filter buttons to show All, Pending, or Completed tasks.</td>
+        </tr>
+        <tr>
+          <td><strong>Task Detail</strong></td>
+          <td>View full details of a task. Mark it as complete or delete it from here.</td>
+        </tr>
+        <tr>
+          <td><strong>About</strong></td>
+          <td>This page — describes the app and explains how to navigate it.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Tech Stack</h2>
+    <div class="detail-row"><span class="key">Frontend</span><span class="val">HTML5, CSS3 (custom stylesheet)</span></div>
+    <div class="detail-row"><span class="key">Container</span><span class="val">Docker (nginx-based)</span></div>
+    <div class="detail-row"><span class="key">CI/CD</span><span class="val">GitHub Actions (ci.yml + cd.yml)</span></div>
+    <div class="detail-row"><span class="key">Registry</span><span class="val">Docker Hub</span></div>
+    <div class="detail-row"><span class="key">Hosting</span><span class="val">Render</span></div>
+  </div>
+</div>
+
+</body>
+</html>

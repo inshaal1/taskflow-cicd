@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow – Task List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="brand">✅ TaskFlow</span>
+  <a href="index.html">Dashboard</a>
+  <a href="add-task.html">Add Task</a>
+  <a href="task-list.html">Task List</a>
+  <a href="task-detail.html">Task Detail</a>
+  <a href="about.html">About</a>
+</nav>
+
+<div class="container">
+  <h1>All Tasks</h1>
+
+  <div class="card">
+    <div class="filter-bar">
+      <button class="active" onclick="filter('all', this)">All</button>
+      <button onclick="filter('Pending', this)">Pending</button>
+      <button onclick="filter('Completed', this)">Completed</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Title</th><th>Due Date</th><th>Priority</th><th>Status</th></tr>
+      </thead>
+      <tbody id="taskTable">
+        <tr data-status="Pending">
+          <td>Design homepage wireframe</td>
+          <td>2026-06-18</td>
+          <td><span class="badge badge-high">High</span></td>
+          <td><span class="badge badge-pending">Pending</span></td>
+        </tr>
+        <tr data-status="Completed">
+          <td>Write unit tests</td>
+          <td>2026-06-20</td>
+          <td><span class="badge badge-medium">Medium</span></td>
+          <td><span class="badge badge-done">Completed</span></td>
+        </tr>
+        <tr data-status="Pending">
+          <td>Deploy to Render</td>
+          <td>2026-06-22</td>
+          <td><span class="badge badge-high">High</span></td>
+          <td><span class="badge badge-pending">Pending</span></td>
+        </tr>
+        <tr data-status="Completed">
+          <td>Setup CI/CD pipeline</td>
+          <td>2026-06-15</td>
+          <td><span class="badge badge-high">High</span></td>
+          <td><span class="badge badge-done">Completed</span></td>
+        </tr>
+        <tr data-status="Pending">
+          <td>Write project documentation</td>
+          <td>2026-06-25</td>
+          <td><span class="badge badge-low">Low</span></td>
+          <td><span class="badge badge-pending">Pending</span></td>
+        </tr>
+        <tr data-status="Completed">
+          <td>Create Dockerfile</td>
+          <td>2026-06-10</td>
+          <td><span class="badge badge-medium">Medium</span></td>
+          <td><span class="badge badge-done">Completed</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+function filter(status, btn) {
+  document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#taskTable tr').forEach(row => {
+    row.style.display = (status === 'all' || row.dataset.status === status) ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
